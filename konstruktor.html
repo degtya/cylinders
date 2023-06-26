@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atlanta Cylinders</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+ 
+<body>
+    <div class="wrapper">
+        
+      <div class="options-column">
+            <div class="options">
+                <h2 id="selected-parameter-title"></h2>
+                <ul id="selected-parameter-options"></ul>
+                <button id="confirm-button" onclick="confirmParameter()" >Potvrdit</button>
+            </div>
+        </div>
+        <div class="summary-column" id="summary-column" style="display: none;">
+            <h1>Shrnuti</h1>
+            <ul id="summary"></ul>
+            <div class="shrnuti">
+                <h1>Zeptat na cenu:<h1>
+                <form action="/odeslat.php" method="post">
+                 <div class="input-container">
+            <label for="jmeno"style="font-weight: var(--helvetica-14-bold-weight);line-height: var(--helvetica-14-bold-line-height);">Jméno:</label>
+            <input type="text" id="jmeno" name="jmeno" required>
+        </div>
+        <div class="input-container">
+            <label for="email" style="font-weight: var(--helvetica-14-bold-weight);line-height: var(--helvetica-14-bold-line-height);">E-mail:</label>
+            <input type="email" id="email" name="email" required>
+        </div>
+        <div class="input-container">
+            <label for="telefon" style="font-weight: var(--helvetica-14-bold-weight);line-height: var(--helvetica-14-bold-line-height);">Telefon:</label>
+            <input type="text" id="telefon" name="telefon" required>
+        </div>
+        <input type="submit" value="Odeslat" >
+              </div>
+              
+        </div>
+        <div class="image-column">
+            <div class="image-container">
+                <img id="selected-image" src="images/cylinders.svg" alt="Selected Image">
+            </div>
+        </div>
+        <div class="parameters-column">
+            <div class="parameters">
+                <h2>Parametry</h2>
+                <ul>
+                    <hr class="horizontal-line">
+                    <li>
+                        <button class="parameter-button" onclick="selectParameter('Velikost svazku')">Velikost svazku</button>
+                      </li>
+                      <hr class="horizontal-line">
+                      <li>
+                        <button class="parameter-button" onclick="selectParameter('Druh plynu')">Druh plynu</button>
+                      </li>
+                      <hr class="horizontal-line">
+                      <li>
+                        <button class="parameter-button" onclick="selectParameter('Pracovní tlak PW a velikost koncovky')">Pracovní tlak PW a velikost koncovky</button>
+                      </li>
+                      <hr class="horizontal-line">
+                      <li>
+                        <button class="parameter-button" onclick="selectParameter('Počet výstupu a vybavení')">Počet výstupu a vybavení</button>
+                      </li>
+                      <hr class="horizontal-line">
+                      <li>
+                        <button class="parameter-button" onclick="selectParameter('Doplňkové služby')">Doplňkové služby</button>
+                      </li>
+                      <hr class="horizontal-line">
+                    
+                </ul>
+                <button onclick="showSummary()"  style="background-color: black; color: white; border: none;border-radius: 25px; padding: 10px 30px; font-size: 10px;
+                color: var(--dark-gray);transition: background-color 0.3s ease; align-items: center; justify-content: center; font-family: var(--helvetica-14-bold-family); font-weight: var(--helvetica-14-bold-weight); line-height: var(--helvetica-14-bold-line-height); text-transform: uppercase;">Shrnuti</button>
+            </div>
+        </div>
+      
+        <div class="summary-column" id="summary-column" style="display: none;">
+            <h2>Shrnuti</h2>
+            <ul id="summary"></ul>
+            <div class="shrnuti">
+                <p>Zeptat na cenu:</p>
+                <form action="/odeslat.php" method="post">
+                 <div class="input-container">
+            <label for="jmeno">Jméno:</label>
+            <input type="text" id="jmeno" name="jmeno" required>
+        </div>
+        <div class="input-container">
+            <label for="email">E-mail:</label>
+            <input type="email" id="email" name="email" required>
+        </div>
+        <div class="input-container">
+            <label for="telefon">Telefon:</label>
+            <input type="text" id="telefon" name="telefon" required>
+        </div>
+        <input type="submit" value="Odeslat">
+              </div>
+              
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
