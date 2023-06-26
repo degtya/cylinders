@@ -141,8 +141,7 @@ a{text-decoration: none;
     cursor: pointer;
     padding: 0;
     font-size: inherit;
-   
-    font-family: inherit;
+    font-family: Helvetica;
     color: inherit;
     text-align: left;
   }
@@ -193,6 +192,7 @@ a{text-decoration: none;
   .parameters button {
     display: block;
     margin-bottom: 10px;
+    font-family: Helvetica;
     
   }
   #selected-image{
